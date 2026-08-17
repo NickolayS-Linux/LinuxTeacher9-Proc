@@ -176,11 +176,12 @@ PID: 704938, процесса:  postgres, команда: postgres: logger      
 **PID: 704938, процесса:  postgres, команда: postgres: logger                                             , открытые файлы: /var/lib/pgpro/1c-17/test17/log/postgresql-2026-08-14_000000.log**
 
 
-Запуск скрипта
+**Запуск скрипта**
+
+sudo chmod +x /usr/local/bin/proc.sh 
 
 sudo nano /usr/local/bin/proc.sh 
 
-sudo chmod +x /usr/local/bin/proc.sh 
 
 
 
