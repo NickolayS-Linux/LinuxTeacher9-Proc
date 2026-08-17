@@ -22,7 +22,8 @@ Oracle VirtualBox (https://www.virtualbox.org/wiki/Linux_Downloads).
 echo "Вывод процессов Pid, Ppid, Name..."
 while read -r line; do
     if [ -d "$line" ]; then
-        PS=$(cat $line/status 2>/dev/null | grep -E "Pid|Ppid|Name" | awk '$2 > 0')
+        PS=$(cat $line/status 2>/dev/null | awk '$2 >0' | grep -E "Pid|Ppid|Name")
+        echo $PS
     fi
 done < <(find /proc -maxdepth 1 -type d -regextype posix-extended -regex ".*/[0-9]+")
 
